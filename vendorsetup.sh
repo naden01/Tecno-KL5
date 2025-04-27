@@ -37,10 +37,9 @@ export OF_ALLOW_DISABLE_NAVBAR=0
 export OF_CLOCK_POS=1
 
 # maintainer 
-export OF_MAINTAINER_AVATAR="$(gettop)/device/tecno/LH8n/maintainer_avatar.png"
+export OF_MAINTAINER_AVATAR="$(gettop)/device/tecno/KL5/maintainer_avatar.png"
 cp "${OF_MAINTAINER_AVATAR}" "$(gettop)/bootable/recovery/gui/theme/portrait_hdpi/images/Default/About/maintainer.png"
 export OF_MAINTAINER="Nazephyrus"
-export FOX_VARIANT="A12+"
 
 # Important build settings
 export ALLOW_MISSING_DEPENDENCIES=true
@@ -54,12 +53,3 @@ export USE_CCACHE=1
 export CCACHE_EXEC=/usr/bin/ccache
 export CCACHE_MAXSIZE="5G"
 export CCACHE_DIR=".ccache"
-
-	if [ ! -d ${CCACHE_DIR} ]; then
-		mkdir $CCACHE_DIR
-	fi
-else
-	if [ -z "$FOX_BUILD_DEVICE" -a -z "$SCRIPT_SOURCE" ]; then
-		echo "I: This script requires bash or zsh. Not processing the $FDEVICE $(basename $0)"
-	fi
-fi
