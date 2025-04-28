@@ -164,8 +164,6 @@ TW_USB_STORAGE := true
 
 # MTP
 TW_HAS_MTP := true
-TW_MTP_DEVICE := "/dev/usb-ffs/mtp"
-TW_INCLUDE_LIBUSB := true
 
 # Vendor Boot
 BOARD_EXCLUDE_KERNEL_FROM_RECOVERY_IMAGE     := true
