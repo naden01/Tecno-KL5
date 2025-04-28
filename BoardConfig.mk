@@ -112,11 +112,17 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 # Treble
 BOARD_VNDK_VERSION := current
 
-
 # Verified Boot
 BOARD_AVB_ENABLE := true
 
-#s
+# Crypto
+TW_INCLUDE_CRYPTO               := true
+TW_INCLUDE_CRYPTO_FBE           := true
+TW_INCLUDE_FBE_METADATA_DECRYPT := true
+BOARD_USES_METADATA_PARTITION   := true
+TW_USE_FSCRYPT_POLICY           := 2
+TW_FORCE_KEYMASTER_VER          := true
+
 PLATFORM_VERSION                := 14
 PLATFORM_VERSION_LAST_STABLE    := $(PLATFORM_VERSION)
 PLATFORM_SECURITY_PATCH         := 2099-12-31
