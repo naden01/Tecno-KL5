@@ -37,9 +37,9 @@ export OF_ALLOW_DISABLE_NAVBAR=0
 export OF_CLOCK_POS=1
 
 # maintainer 
-export OF_MAINTAINER_AVATAR="$(gettop)/device/tecno/KL5/maintainer_avatar.png"
-cp "${OF_MAINTAINER_AVATAR}" "$(gettop)/bootable/recovery/gui/theme/portrait_hdpi/images/Default/About/maintainer.png"
-export OF_MAINTAINER="Nazephyrus"
+#export OF_MAINTAINER_AVATAR="$(gettop)/device/tecno/KL5/maintainer_avatar.png"
+#cp "${OF_MAINTAINER_AVATAR}" "$(gettop)/bootable/recovery/gui/theme/portrait_hdpi/images/Default/About/maintainer.png"
+#export OF_MAINTAINER="Nazephyrus"
 
 # Important build settings
 export ALLOW_MISSING_DEPENDENCIES=true
