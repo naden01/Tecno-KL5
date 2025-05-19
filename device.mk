@@ -32,8 +32,7 @@ AB_OTA_PARTITIONS += \
 # Boot control HAL
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-service \
-    android.hardware.boot@1.2-mtkimpl \
-    android.hardware.boot@1.2-mtkimpl.recovery
+    android.hardware.boot@1.2-mtkimpl
 
 PRODUCT_PACKAGES_DEBUG += \
     bootctl \
@@ -65,21 +64,25 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1
+
 # Additional Libraries
 TARGET_RECOVERY_DEVICE_MODULES += \
-    libkeymaster4 \
-    libkeymaster41 \
-    libpuresoftkeymasterdevice \
-    libion \
-    libxml2
+    android.hardware.keymaster@4.1 \
 
 RECOVERY_LIBRARY_SOURCE_FILES += \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster4.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libkeymaster41.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libpuresoftkeymasterdevice.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libion.so \
-    $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+    $(TARGET_OUT_SHARED_LIBRARIES)/android.hardware.keymaster@4.1
 
+# Keystore2
+PRODUCT_PACKAGES += \
+    android.system.keystore2
+	
+# Drm
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.4
+	
 # MTK plpath utils
 PRODUCT_PACKAGES += \
     mtk_plpath_utils \
