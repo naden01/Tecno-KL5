@@ -37,6 +37,8 @@ subsystem dma_heap
 /dev/tty                  0666   root       root
 /dev/random               0666   root       root
 /dev/urandom              0666   root       root
+# Aside from kernel threads, only prng_seeder needs access to HW RNG
+/dev/hw_random            0400   prng_seeder prng_seeder
 /dev/ashmem*              0666   root       root
 /dev/binder               0666   root       root
 /dev/hwbinder             0666   root       root
@@ -46,10 +48,6 @@ subsystem dma_heap
 /dev/dma_heap/system      0444   system     system
 /dev/dma_heap/system-uncached      0444   system     system
 /dev/dma_heap/system-secure        0444   system     system
-
-#SDD: add ANDROIDRBE-357 by jixue.tang for system monitor feature. Start
-/dev/ensignal   0666   root   root
-#SDD: add ANDROIDRBE-357 by jixue.tang for system monitor feature. End
 
 # kms driver for drm based gpu
 /dev/dri/*                0666   root       graphics
@@ -71,9 +69,8 @@ subsystem dma_heap
 # CDMA radio interface MUX
 /dev/ppp                  0660   radio      vpn
 
-# Virtualisation is managed by Virt Manager
-/dev/kvm                  0600   virtmanager root
-/dev/vhost-vsock          0600   virtmanager root
+/dev/kvm                  0666   root       root
+/dev/vhost-vsock          0666   root       root
 
 # sysfs properties
 /sys/devices/platform/trusty.*      trusty_version        0440  root   log
@@ -84,3 +81,7 @@ subsystem dma_heap
 /sys/devices/system/cpu/cpu*   cpufreq/scaling_min_freq   0664  system system
 /sys/devices/virtual/misc/uhid/*/leds/* brightness   0664  system system
 /sys/devices/virtual/misc/uhid/*/leds/* multi_intensity   0664  system system
+
+#SDD: add TESSCR-19159 by chonglin.yang 2023/5/12 for system monitor feature. Start
+/dev/ensignal   0666   root   root
+#SDD: add TESSCR-19159 by chonglin.yang 2023/5/12 for system monitor feature. End

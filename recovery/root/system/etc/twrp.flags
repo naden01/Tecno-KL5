@@ -40,8 +40,7 @@
 /usb_otg		auto		/dev/block/sda1					/dev/block/sda		/dev/block/sdd1			flags=display="USB-OTG";storage;wipeingui;removable;backup=0
 
 # Flashable logical partitions
-/system_image		emmc		/dev/block/bootdevice/by-name/system									flags=backup;flashimg
-/vendor_image		emmc		/dev/block/bootdevice/by-name/vendor									flags=backup;flashimg
-/system_ext_image	emmc		/dev/block/bootdevice/by-name/system_ext								flags=display="System_EXT Image";backup;flashimg
-/product_image		emmc		/dev/block/bootdevice/by-name/product									flags=display="Product Image";backup;flashimg
-/vendor_dlkm_image	emmc		/dev/block/bootdevice/by-name/vendor_dlkm								flags=display="VendorDLKM Image";backup;flashimg
+/system_image	    emmc		/dev/block/mapper/system							flags=backup=0;flashimg;display="System Image"
+/system_ext_image	emmc		/dev/block/mapper/system_ext							flags=backup=0;flashimg;display="System_Ext Image"
+/vendor_image	    emmc		/dev/block/mapper/vendor							flags=backup=0;flashimg;display="Vendor Image"
+/product_image	  emmc		/dev/block/mapper/product							flags=backup=0;flashimg;display="Product Image"

@@ -12,13 +12,7 @@ product				/product		erofs		ro																	wait,slotselect,logical
 product				/product		ext4		ro																	wait,slotselect,logical
 system_ext			/system_ext		erofs		ro																	wait,slotselect,logical
 system_ext			/system_ext		ext4		ro																	wait,slotselect,logical
-tr_mi				/tr_mi			ext4		ro																	wait,slotselect,logical,nofail
-tr_theme			/tr_theme		ext4		ro																	wait,slotselect,logical,nofail
-tr_region			/tr_region		ext4		ro																	wait,slotselect,logical,nofail
-tr_company			/tr_company		ext4		ro																	wait,slotselect,logical,nofail
-tr_carrier			/tr_carrier		ext4		ro																	wait,slotselect,logical,nofail
-tr_product			/tr_product		erofs		ro																	wait,slotselect,logical,nofail
-tr_preload			/tr_preload		erofs		ro																	wait,slotselect,logical,nofail
+
 
 # Userdata partition
 /dev/block/by-name/metadata	/metadata		ext4		noatime,nosuid,nodev,discard														wait,check,formattable
@@ -28,6 +22,3 @@ tr_preload			/tr_preload		erofs		ro																	wait,slotselect,logical,nofa
 # The update_engine code looks for this entry in order to determine the boot device address
 # and fails if it does not find it.
 /dev/block/by-name/misc		/misc			emmc		defaults																defaults
-
-# Use tranfs as cache
-/dev/block/by-name/tranfs	/cache			ext4		noatime,nosuid,nodev,discard	

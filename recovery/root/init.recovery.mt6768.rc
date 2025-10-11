@@ -69,7 +69,7 @@ on property:vendor.sys.listener.registered=true
     start gatekeeper-1-0
     start keymaster-4-1
     start tee-1-1
-
+   
 on property:hwservicemanager.ready=true
     start mobicore
     start keymaster-4-1
@@ -87,9 +87,9 @@ on property:ro.crypto.state=unencrypted
     stop keymaster-4-1
     stop gatekeeper-1-0
     stop tee-1-1
-
+        
 on property:twrp.all.users.decrypted=true
     stop mobicore
     stop keymaster-4-1
     stop gatekeeper-1-0
-    stop tee-1-1mtp,adb 
+    stop tee-1-1
