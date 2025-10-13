@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_KL5.mk
+    $(LOCAL_DIR)/pb_KL5.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_KL5-user \
-    twrp_KL5-userdebug \
-    twrp_KL5-eng
+    pb_KL5-user \
+    pb_KL5-userdebug \
+    pb_KL5-eng
