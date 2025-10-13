@@ -180,6 +180,9 @@ TW_DEVICE_VERSION := nazephyrus | KL5
 # no recovery partition
 TW_HAS_NO_RECOVERY_PARTITION := true
 
+# Custom CPU Temp Path
+TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone4/temp"
+
 # StatusBar
 TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS     := "300"
