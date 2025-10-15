@@ -189,3 +189,47 @@ TW_CUSTOM_CPU_POS     := "300"
 TW_CUSTOM_CLOCK_POS   := "70"
 TW_CUSTOM_BATTERY_POS := "790"
 
+#SHRP Prop
+
+# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
+# Path of your SHRP Tree
+SHRP_PATH := device/tecno/KL5
+
+# Maintainer name *
+SHRP_MAINTAINER := Nazephyrus
+
+# Device codename *
+SHRP_DEVICE_CODE := KL5
+
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
+SHRP_REC_TYPE := Treble
+
+# Recovery Type (It can be A/B or A_only) [Only for About Section] *
+SHRP_DEVICE_TYPE := A/B
+# SHRP Padding Flag (Only for rounded corner devices.) [Optional]
+# You have to change these values according to your device's roundness.
+SHRP_STATUSBAR_RIGHT_PADDING := 40
+SHRP_STATUSBAR_LEFT_PADDING := 40
+
+# For Notch devices [Optional]
+SHRP_NOTCH := true
+
+# put this 0 if device has no EDL mode *
+SHRP_EDL_MODE := 0
+
+# Put your device's paths from fstab *
+SHRP_EXTERNAL := /external_sd
+SHRP_INTERNAL := /sdcard
+SHRP_OTG := /usb_otg
+
+# Use this flag only if your device is A/B *
+SHRP_AB := true
+
+# Check your device's recovery path, dont use blindly
+SHRP_REC := no_recovery_partition 
+
+# Put 0 to disable flashlight
+SHRP_FLASH := 0
+
+# Default (if not set) will use /system if SHRP_EXPRESS true otherwise will use legacy method of patching
+SHRP_EXPRESS_USE_DATA := true
