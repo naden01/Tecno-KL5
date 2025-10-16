@@ -1,4 +1,4 @@
-# Twrp Tree For Tecno Spark 30C (KL5)
+# Twrp Tree For Tecno Spark 30C (KL5/KL5n)
 
 # Checks
 Blocking checks
@@ -28,10 +28,10 @@ Minor checks
 - [✔] battery level
 - [✔] temperature
 - [✔] encrypted backups
-- [X] input devices via USB (USB-OTG) - keyboard and mouse and storage
+- [ X ] input devices via USB (USB-OTG) - keyboard and mouse and storage
 - [✔] USB mass storage export
 - [✔] set brightness
-- [X] vibrate
+- [ X ] vibrate
 - [✔] screenshot
 - [✔] partition SD card
 - [✔] Fastbootd
